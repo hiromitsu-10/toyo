@@ -1,0 +1,116 @@
+@mixin pc {
+    @media screen and (min-width: 960px){
+        @content;
+    }
+}
+@mixin tab {
+    @media screen and (max-width: 959px){
+        @content;
+    }
+}
+@mixin sp {
+    @media screen and (max-width: 600px){
+        @content;
+    }
+}
+
+
+
+body{
+    width: 90%;
+    margin: 3% auto;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    @include tab{
+        display: block;
+    }
+    .main{
+        width: 70%;
+        @include tab{
+            width: 100%;
+        }
+        .title{
+            h1{   
+                color: #171c61;
+            }
+        }
+        section{
+            h2{
+                border-bottom: 1px solid #171c61;
+            }
+            .menu{
+                display: inline-block;
+                border-bottom: 1px solid orange;
+                width: 45%;
+                padding-right: 4%;
+                @include sp{
+                    width: 100%;
+                }
+                img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .link{
+        width: 25%;
+        text-align: center;
+        @include tab{
+            display: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        img{
+            width: 70%;
+            margin: 7% 0;
+        }
+        .article{
+            a{
+                display: flex;
+                justify-content: space-around;
+                width: 95%;
+                margin: 0 auto;
+                .article_image{
+                    width: 100%;
+                    background: url(../img/gakushoku_ken.jpg)no-repeat center;
+                    background-size: contain;
+                }
+                p{
+                    color: black;
+                    font-weight: bold;
+                    font-size: 90%;
+                }
+            }
+        }
+    }
+    .sp_link{
+        display: none;
+        @include tab{
+            display: inline-block;
+            img{
+                width: 50%;
+                margin-bottom: 3%;
+            }
+            .sp_article{
+                a{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50%;
+                    margin-bottom: 3%;
+                    .sp_article_image{
+                        width: 100%;
+                        background: url(../img/gakushoku_ken.jpg)no-repeat center;
+                        background-size: contain;
+                    }
+                    p{
+                        color: black;
+                        font-weight: bold;
+                        font-size: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
