@@ -1,0 +1,102 @@
+body {
+  width: 90%;
+  margin: 3% auto;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 959px) {
+  body {
+    display: block;
+  }
+}
+body .main {
+  width: 70%;
+}
+@media screen and (max-width: 959px) {
+  body .main {
+    width: 100%;
+  }
+}
+body .main .title h1 {
+  color: #171c61;
+}
+body .main section h2 {
+  border-bottom: 1px solid #171c61;
+}
+body .main section .menu {
+  display: inline-block;
+  border-bottom: 1px solid orange;
+  width: 45%;
+  padding-right: 4%;
+}
+@media screen and (max-width: 600px) {
+  body .main section .menu {
+    width: 100%;
+  }
+}
+body .main section .menu img {
+  width: 80%;
+}
+body .link {
+  width: 25%;
+  text-align: center;
+}
+@media screen and (max-width: 959px) {
+  body .link {
+    display: none;
+  }
+}
+body .link a {
+  text-decoration: none;
+}
+body .link img {
+  width: 70%;
+  margin: 7% 0;
+}
+body .link .article a {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+}
+body .link .article a .article_image {
+  width: 100%;
+  background: url(../img/gakushoku_ken.jpg) no-repeat center;
+  background-size: contain;
+}
+body .link .article a p {
+  color: black;
+  font-weight: bold;
+  font-size: 90%;
+}
+body .sp_link {
+  display: none;
+}
+@media screen and (max-width: 959px) {
+  body .sp_link {
+    display: inline-block;
+  }
+  body .sp_link img {
+    width: 50%;
+    margin-bottom: 3%;
+  }
+  body .sp_link .sp_article a {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 3%;
+  }
+  body .sp_link .sp_article a .sp_article_image {
+    width: 100%;
+    background: url(../img/gakushoku_ken.jpg) no-repeat center;
+    background-size: contain;
+  }
+  body .sp_link .sp_article a p {
+    color: black;
+    font-weight: bold;
+    font-size: 90%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
